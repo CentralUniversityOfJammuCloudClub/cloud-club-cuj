@@ -14,7 +14,7 @@
     rel="stylesheet"
   />
 
-  <!-- Font Awesome (FIXED – WORKING ICONS) -->
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -23,233 +23,187 @@
 
 <body>
 
-  <!-- ================= NAVBAR ================= -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="logo-wrapper">
-        <img src="assets/cloudclublogo.png" alt="Cloud Club Logo" class="nav-logo" />
-        <img src="assets/cujlogo.png" alt="Central University Of Jammu Logo" class="nav-logo" />
-      </div>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="nav-container">
 
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#members">Team</a></li>
-
-        <!-- ✅ ONLY CHANGE -->
-        <li>
-          <a
-            href="https://forms.gle/eRyNY2KBd2bPck4e9"
-            class="nav-btn"
-            target="_blank"
-          >
-            Join Us
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- ================= HERO ================= -->
-  <header class="hero">
-    <div class="hero-bg">
-      <span class="cloud c1"></span>
-      <span class="cloud c2"></span>
-      <span class="cloud c3"></span>
+    <div class="logo-wrapper">
+      <img src="assets/cloudclublogo.png" alt="Cloud Club Logo" class="nav-logo" />
+      <img src="assets/cujlogo.png" alt="Central University Of Jammu Logo" class="nav-logo" />
     </div>
 
-    <div class="hero-content">
-      <h1>Central University Of Jammu Cloud Club</h1>
-      <p class="hero-subtitle">
-        Learn • Build • Innovate with Cloud Technologies
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#about" class="btn primary">About Us</a>
-        <a href="#events" class="btn secondary">View Events</a>
-      </div>
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </header>
 
-  <!-- ================= ABOUT ================= -->
-  <section id="about" class="section">
-    <div class="section-container">
-      <h2>About Us</h2>
-
-      <p class="section-text">
-        The Central University Of Jammu Cloud Club is a student-led technical community
-        dedicated to spreading knowledge of cloud computing, DevOps, and modern IT
-        practices among students.
-      </p>
-
-      <p class="section-text">
-        Our objective is to bridge the gap between academic learning and real-world
-        industry requirements by organizing hands-on workshops, technical sessions,
-        and collaborative projects using platforms such as AWS, Azure, and Google Cloud.
-      </p>
-
-      <p class="section-text">
-        The club also focuses on leadership development, teamwork, and professional
-        growth. Through hackathons, seminars, and community events, members gain
-        exposure to industry trends and practical problem-solving skills.
-      </p>
-
-      <p class="section-text">
-        Whether you are a beginner or an experienced learner, the Cloud Club provides
-        an inclusive environment to learn, experiment, and grow together.
-      </p>
-    </div>
-  </section>
-
-  <!-- ================= WHY JOIN ================= -->
-  <section class="section light">
-    <div class="section-container">
-      <h2>Why Join Us</h2>
-
-      <div class="grid why-join-grid">
-
-        <div class="card">
-          <h3>Cloud Computing</h3>
-          <p>
-            Learn cloud fundamentals and work with AWS, Azure, and GCP through guided
-            labs, real-world use cases, and structured learning paths.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>DevOps & Automation</h3>
-          <p>
-            Gain hands-on experience with CI/CD pipelines, Docker, automation tools,
-            and infrastructure as code used in modern software teams.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Hands-on Projects</h3>
-          <p>
-            Build practical cloud-based projects that strengthen your portfolio and
-            demonstrate your skills to recruiters.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Events & Hackathons</h3>
-          <p>
-            Participate in workshops, coding events, and hackathons to collaborate
-            with peers and industry professionals.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Career Guidance</h3>
-          <p>
-            Receive mentorship for internships, certifications, resume building,
-            and interview preparation from experienced members.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Certification Support</h3>
-          <p>
-            Prepare for AWS, Azure, and GCP certifications with curated resources,
-            mentorship, and practice sessions.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= EVENTS ================= -->
-  <section id="events" class="section">
-    <div class="section-container">
-      <h2>Events</h2>
-
-      <p class="event-line">
-        <span class="event-date">25 Jan 2026</span>
-        <span class="event-separator">—</span>
-        Introduction & Orientation of Central University Jammu Cloud Club
-      </p>
-
-    </div>
-  </section>
-
-  <!-- ================= TEAM ================= -->
-  <section id="members" class="section light">
-    <div class="section-container">
-      <h2>Our Team</h2>
-
-      <div class="grid">
-
-        <div class="card team-card">
-          <img src="assets/team/mrigank.jpg" alt="Mrigank Jaiswal">
-          <h3>Mrigank Jaiswal</h3>
-          <p class="role">Captain</p>
-        </div>
-
-        <div class="card team-card">
-          <img src="assets/team/nilesh.jpg" alt="Nilesh Kumar">
-          <h3>Nilesh Kumar</h3>
-          <p class="role">Vice Captain</p>
-        </div>
-
-        <div class="card team-card">
-          <img src="assets/team/divyani.jpg" alt="Divyani Gupta">
-          <h3>Divyani Gupta</h3>
-          <p class="role">Technical Lead</p>
-        </div>
-
-        <div class="card team-card">
-          <img src="assets/team/amrit.jpg" alt="Amrit Puri">
-          <h3>Amrit Puri</h3>
-          <p class="role">Social Media Lead</p>
-        </div>
-
-        <div class="card team-card">
-          <img src="assets/team/shivam.jpg" alt="Shivam Yadav">
-          <h3>Shivam Yadav</h3>
-          <p class="role">Events & Outreach Lead</p>
-        </div>
-
-        <div class="card team-card">
-          <img src="assets/team/robins.jpg" alt="Robins Yadav">
-          <h3>Robins Yadav</h3>
-          <p class="role">Community & Engagement Lead</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="footer">
-    <div class="footer-content">
-      <h3>Central University Of Jammu Cloud Club</h3>
-      <p>
-        A student community at Central University Of Jammu focused on cloud
-        learning and innovation.
-      </p>
-
-      <div class="social-links">
-        <a href="https://www.linkedin.com/company/aws-cloud-club-central-university-of-jammu/"
-           target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
+    <!-- Nav Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#members">Team</a></li>
+      <li>
+        <a
+          href="https://forms.gle/eRyNY2KBd2bPck4e9"
+          class="nav-btn"
+          target="_blank"
+        >
+          Join Us
         </a>
+      </li>
+    </ul>
 
-        <a href="https://www.instagram.com/aws.cujammu?igsh=MTE4eG55dHh0cG9sMw=="
-          target="_blank" aria-label="Instagram">
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-bg">
+    <span class="cloud c1"></span>
+    <span class="cloud c2"></span>
+    <span class="cloud c3"></span>
+  </div>
+
+  <div class="hero-content">
+    <h1>Central University Of Jammu Cloud Club</h1>
+    <p class="hero-subtitle">
+      Learn • Build • Innovate with Cloud Technologies
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#about" class="btn primary">About Us</a>
+      <a href="#events" class="btn secondary">View Events</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+  <div class="section-container">
+    <h2>About Us</h2>
+    <p class="section-text">
+      The Central University Of Jammu Cloud Club is a student-led technical community
+      dedicated to spreading knowledge of cloud computing, DevOps, and modern IT
+      practices among students.
+    </p>
+    <p class="section-text">
+      Our objective is to bridge the gap between academic learning and real-world
+      industry requirements by organizing hands-on workshops, technical sessions,
+      and collaborative projects using platforms such as AWS, Azure, and Google Cloud.
+    </p>
+    <p class="section-text">
+      The club also focuses on leadership development, teamwork, and professional
+      growth. Through hackathons, seminars, and community events, members gain
+      exposure to industry trends and practical problem-solving skills.
+    </p>
+    <p class="section-text">
+      Whether you are a beginner or an experienced learner, the Cloud Club provides
+      an inclusive environment to learn, experiment, and grow together.
+    </p>
+  </div>
+</section>
+
+<!-- ================= WHY JOIN ================= -->
+<section class="section light">
+  <div class="section-container">
+    <h2>Why Join Us</h2>
+
+    <div class="grid">
+      <div class="card"><h3>Cloud Computing</h3><p>Learn cloud fundamentals and work with AWS, Azure, and GCP through guided labs, real-world use cases, and structured learning paths.</p></div>
+      <div class="card"><h3>DevOps & Automation</h3><p>Gain hands-on experience with CI/CD pipelines, Docker, automation tools, and infrastructure as code used in modern software teams.</p></div>
+      <div class="card"><h3>Hands-on Projects</h3><p>Build practical cloud-based projects that strengthen your portfolio and demonstrate your skills to recruiters.</p></div>
+      <div class="card"><h3>Events & Hackathons</h3><p>Participate in workshops, coding events, and hackathons to collaborate with peers and industry professionals.</p></div>
+      <div class="card"><h3>Career Guidance</h3><p>Receive mentorship for internships, certifications, resume building, and interview preparation from experienced members.</p></div>
+      <div class="card"><h3>Certification Support</h3><p>Prepare for AWS, Azure, and GCP certifications with curated resources, mentorship, and practice sessions.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EVENTS ================= -->
+<section id="events" class="section">
+  <div class="section-container">
+    <h2>Events</h2>
+    <p class="event-line">
+      <span class="event-date">25 Jan 2026</span> — Introduction & Orientation of Central University Jammu Cloud Club
+    </p>
+  </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section id="members" class="section light">
+  <div class="section-container">
+    <h2>Our Team</h2>
+
+    <div class="grid">
+      <div class="card team-card"><img src="assets/team/mrigank.jpg" alt="Mrigank Jaiswal"><h3>Mrigank Jaiswal</h3><p class="role">Captain</p></div>
+      <div class="card team-card"><img src="assets/team/nilesh.jpg" alt="Nilesh Kumar"><h3>Nilesh Kumar</h3><p class="role">Vice Captain</p></div>
+      <div class="card team-card"><img src="assets/team/divyani.jpg" alt="Divyani Gupta"><h3>Divyani Gupta</h3><p class="role">Technical Lead</p></div>
+      <div class="card team-card"><img src="assets/team/amrit.jpg" alt="Amrit Puri"><h3>Amrit Puri</h3><p class="role">Social Media Lead</p></div>
+      <div class="card team-card"><img src="assets/team/shivam.jpg" alt="Shivam Yadav"><h3>Shivam Yadav</h3><p class="role">Events & Outreach Lead</p></div>
+      <div class="card team-card"><img src="assets/team/robins.jpg" alt="Robins Yadav"><h3>Robins Yadav</h3><p class="role">Community & Engagement Lead</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-content">
+    <h3>Central University Of Jammu Cloud Club</h3>
+    <p>A student community at Central University Of Jammu focused on cloud learning and innovation.</p>
+
+    <div class="social-links">
+      <div class="social-wrapper">
+        <a href="https://www.instagram.com/aws.cujammu" target="_blank" class="social-icon instagram">
           <i class="fab fa-instagram"></i>
         </a>
-
+        <span class="social-label">Instagram</span>
       </div>
-
-      <p class="footer-note">
-        © 2026 Central University Of Jammu Cloud Club • All rights reserved
-      </p>
+      <div class="social-wrapper">
+        <a href="https://www.linkedin.com/company/aws-cloud-club-central-university-of-jammu/" target="_blank" class="social-icon linkedin">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <span class="social-label">LinkedIn</span>
+      </div>
+      <div class="social-wrapper">
+        <a href="https://www.meetup.com/aws-cloud-club-at-central-university-of-jammu/members/?op=all" target="_blank" class="social-icon meetup">
+          <i class="fa-solid fa-users"></i>
+        </a>
+        <span class="social-label">Meetup</span>
+      </div>
     </div>
-  </footer>
+
+    <p class="footer-note">© 2026 Central University Of Jammu Cloud Club • All rights reserved</p>
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+  // Hamburger toggle
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("navLinks");
+  hamburger.addEventListener("click", () => navLinks.classList.toggle("active"));
+  document.querySelectorAll(".nav-links a").forEach(link => link.addEventListener("click", () => navLinks.classList.remove("active")));
+
+  // Scroll offset fix for navbar
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      const offset = document.querySelector(".navbar").offsetHeight;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = target.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset + 10; // 10px extra padding
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    });
+  });
+</script>
 
 </body>
 </html>
+
+
 
 
