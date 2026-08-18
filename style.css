@@ -14,6 +14,12 @@ body {
   background-color: #0b1220;
   color: #e5e7eb;
   line-height: 1.7;
+
+  /* Grid background */
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 a {
@@ -58,6 +64,7 @@ a {
   list-style: none;
   display: flex;
   gap: 24px;
+  align-items: center;
 }
 
 .nav-links a {
@@ -74,7 +81,7 @@ a {
   padding: 8px 16px;
   border-radius: 6px;
   background: linear-gradient(135deg, #38bdf8, #2563eb);
-  color: #ffffff !important;
+  color: #fff !important;
   font-weight: 600;
 }
 
@@ -136,14 +143,32 @@ a {
   animation: float 22s ease-in-out infinite;
 }
 
-.c1 { top: 10%; left: 15%; }
-.c2 { top: 50%; right: 10%; animation-duration: 26s; }
-.c3 { bottom: 5%; left: 40%; animation-duration: 30s; }
+.c1 {
+  top: 10%;
+  left: 15%;
+}
+
+.c2 {
+  top: 50%;
+  right: 10%;
+  animation-duration: 26s;
+}
+
+.c3 {
+  bottom: 5%;
+  left: 40%;
+  animation-duration: 30s;
+}
 
 @keyframes float {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(30px, -40px); }
-  100% { transform: translate(0, 0); }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(30px, -40px);
+  }
 }
 
 /* ================= BUTTONS ================= */
@@ -176,10 +201,11 @@ a {
 /* ================= SECTIONS ================= */
 .section {
   padding: 80px 20px;
+  scroll-margin-top: 110px;
 }
 
 .section.light {
-  background-color: #111827;
+  background: #111827;
 }
 
 .section-container {
@@ -200,7 +226,7 @@ a {
   font-size: 1.05rem;
 }
 
-/* ================= GRID (3–3 FIXED) ================= */
+/* ================= GRID ================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -226,7 +252,7 @@ a {
   border: 1px solid #1f2937;
   padding: 28px;
   border-radius: 16px;
-  transition: 
+  transition:
     transform 0.35s ease,
     box-shadow 0.35s ease,
     border-color 0.35s ease;
@@ -244,9 +270,9 @@ a {
 }
 
 .card:hover {
-  transform: translateY(-12px);
+  transform: translateY(-10px);
   border-color: #f59e0b;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.45);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
 /* ================= TEAM ================= */
@@ -273,6 +299,176 @@ a {
   color: #9ca3af;
 }
 
+/* ================= EVENTS ================= */
+.event-line {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  color: #e5e7eb;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: relative;
+  width: fit-content;
+}
+
+.event-date {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.event-separator {
+  color: #6b7280;
+}
+
+.event-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #f59e0b, #38bdf8);
+  transition: width 0.35s ease;
+}
+
+.event-line:hover::after {
+  width: 100%;
+}
+
+/* ================= EVENTS GRID ================= */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= EVENT CARD ================= */
+.event-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.event-card-inner {
+  background: #0b1220;
+  border: 1px solid #1f2937;
+  padding: 25px;
+  border-radius: 16px;
+  height: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-card-inner:hover {
+  transform: translateY(-10px);
+  border-color: #38bdf8;
+  box-shadow: 0 20px 50px rgba(56, 189, 248, 0.2);
+}
+
+.event-card-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(56, 189, 248, 0.2),
+    transparent
+  );
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.event-card-inner:hover::before {
+  opacity: 1;
+}
+
+.event-card .event-date {
+  font-size: 0.85rem;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.event-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.event-card .event-desc {
+  font-size: 0.95rem;
+  color: #9ca3af;
+}
+
+/* ================= EVENTS HERO ================= */
+.events-hero {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  padding-top: 110px;
+  background: linear-gradient(
+    135deg,
+    #0b1220,
+    #0f172a,
+    #0b1220
+  );
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.events-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.events-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #38bdf8, transparent);
+}
+
+.events-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.events-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.events-hero p {
+  color: #9ca3af;
+  font-size: 1.1rem;
+}
+
 /* ================= FOOTER ================= */
 .footer {
   background: #020617;
@@ -290,12 +486,17 @@ a {
   margin: auto;
 }
 
-/* ================= SOCIAL ICONS WITH LABEL ================= */
+.footer-note {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* ================= SOCIAL ICONS ================= */
 .social-links {
   display: flex;
   justify-content: center;
   gap: 26px;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .social-wrapper {
@@ -315,7 +516,9 @@ a {
   color: #9ca3af;
   opacity: 0;
   transform: translateY(-4px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 .social-wrapper:hover .social-icon {
@@ -327,7 +530,6 @@ a {
   transform: translateY(0);
 }
 
-/* Brand colors */
 .social-icon.linkedin {
   color: #0a66c2;
 }
@@ -337,54 +539,19 @@ a {
 }
 
 .social-icon.instagram {
-  background: radial-gradient(circle at 30% 30%, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  background: radial-gradient(
+    circle at 30% 30%,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* ================= EVENTS ================= */
-.event-line {
-  margin-top: 30px;
-  font-size: 1.15rem;
-  color: #e5e7eb;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  transition: color 0.3s ease;
-  position: relative;
-  cursor: default;
-}
-
-.event-date {
-  color: #f59e0b;
-  font-weight: 600;
-}
-
-.event-separator {
-  color: #6b7280;
-}
-
-.event-line:hover {
-  color: #f59e0b;
-}
-
-.event-line::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, #f59e0b, #38bdf8);
-  transition: width 0.35s ease;
-}
-
-.event-line:hover::after {
-  width: 100%;
-}
-
-/* ================= HAMBURGER MENU ================= */
+/* ================= HAMBURGER ================= */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -423,9 +590,114 @@ a {
   .nav-links.active {
     display: flex;
   }
+
+  .nav-container {
+    padding: 12px 18px;
+  }
+
+  .nav-logo {
+    height: 55px;
+    width: 55px;
+  }
+
+  .logo-wrapper {
+    gap: 12px;
+  }
+
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 200px;
+  }
+
+  .event-line {
+    font-size: 1rem;
+  }
 }
 
-/* ================= OFFSET SECTIONS FOR FIXED NAVBAR ================= */
-section {
-  scroll-margin-top: 110px; /* navbar height */
+/* ================= EVENT DETAIL PAGE ================= */
+.event-detail-card {
+  position: relative;
+  max-width: 1000px;
+  width: 90%;
+  margin: 120px auto;
+  padding: 50px 60px;
+  border-radius: 20px;
+  background: #0b1220;
+  overflow: hidden;
+}
+
+.event-detail-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    120deg,
+    #38bdf8,
+    #2563eb,
+    #f59e0b,
+    #38bdf8
+  );
+  background-size: 300%;
+  animation: glow 6s linear infinite;
+  z-index: -1;
+}
+
+.event-detail-card::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0b1220;
+  border-radius: 18px;
+  z-index: -1;
+}
+
+@keyframes glow {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 300%;
+  }
+}
+
+.event-tag {
+  color: #38bdf8;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.event-desc span {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.back-btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #38bdf8;
+  border-radius: 8px;
+}
+
+.back-btn:hover {
+  background: #38bdf8;
+  color: black;
 }
