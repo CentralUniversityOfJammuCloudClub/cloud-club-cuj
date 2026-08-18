@@ -48,8 +48,9 @@ a {
 
 .nav-logo {
   height: 70px;
-  width: auto;
-  object-fit: contain;
+  width: 70px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 /* ================= NAV LINKS ================= */
